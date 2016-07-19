@@ -15,6 +15,7 @@
       </p>
     </div>
     <script>
+      // 相当于Reducer
       function counter(state, action) {
         if (typeof state === 'undefined') {
           return 0
@@ -30,14 +31,19 @@
         }
       }
 
+      // 创建store，默认已经有三个重要方法：getState(), dispatch(), subscribe().
       var store = Redux.createStore(counter)
       var valueEl = document.getElementById('value')
 
+      // 
       function render() {
         valueEl.innerHTML = store.getState().toString()
       }
 
       render()
+
+      // 订阅Render，只要store.dispatch就会触发Render
+      // 缺点：不管state是否变化，都会重新执行一遍render方法
       store.subscribe(render)
 
       document.getElementById('increment')
