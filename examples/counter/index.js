@@ -1,3 +1,4 @@
+// 1个component，1个reducer，1个store，还未出现action
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux'

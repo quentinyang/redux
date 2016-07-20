@@ -43,6 +43,8 @@ class Counter extends Component {
   }
 }
 
+// 只在开发环境下验证，所以如下是可有可无的，但建议都加上，这样方便开发，
+// 参考：https://facebook.github.io/react/docs/reusable-components-zh-CN.html
 Counter.propTypes = {
   value: PropTypes.number.isRequired,
   onIncrement: PropTypes.func.isRequired,
